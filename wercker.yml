@@ -23,7 +23,7 @@ build:
         name: terraform remote config
         code: |
           cd $HOME/terraform
-          terraform remote config -backend=S3 -backend-config="bucket=terraform-state-ms" -backend-config="key=tf" -backend-config="encrypt=true" -backend-config="region=ap-northeast-1"
+          terraform remote config -backend=S3 -backend-config="bucket=terraform-state-ms" -backend-config="key=tf" -backend-config="encrypt=true" -backend-config="region=ap-northeast-1" -backend-config="access_key=AKIAICWALGNLARKRBGRQ" -backend-config="secret_key=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"
           terraform plan
     - script:
         name: create pull request
@@ -53,7 +53,7 @@ deploy:
         name: terraform remote config
         code: |
           cd $HOME/terraform
-          terraform remote config -backend=S3 -backend-config="bucket=terraform-state-ms" -backend-config="key=tf" -backend-config="encrypt=true" -backend-config="region=ap-northeast-1"
+          terraform remote config -backend=S3 -backend-config="bucket=terraform-state-ms" -backend-config="key=tf" -backend-config="encrypt=true" -backend-config="region=ap-northeast-1" -backend-config="access_key=AKIAICWALGNLARKRBGRQ" -backend-config="secret_key=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"
           terraform plan
     - script:
         name: terraform apply
