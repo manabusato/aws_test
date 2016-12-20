@@ -53,7 +53,7 @@ deploy:
         name: terraform remote config
         code: |
           cd terraform
-          terraform remote config -backend=S3 -backend-config="bucket=your-terraform-state-bucket" -backend-config="key=terraform.tfstate" -backend-config="encrypt=true"
+          terraform remote config -backend=S3 -backend-config="bucket=your-terraform-state-ms" -backend-config="key=terraform.tfstate" -backend-config="encrypt=true"
           terraform plan
     - script:
         name: terraform apply
