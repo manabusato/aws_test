@@ -22,7 +22,7 @@ build:
     - script:
         name: terraform remote config
         code: |
-          cd terraform
+          cd $HOME/terraform
           terraform remote config -backend=S3 -backend-config="bucket=terraform-state-ms" -backend-config="key=tf" -backend-config="encrypt=true"
           terraform plan
     - script:
@@ -52,7 +52,7 @@ deploy:
     - script:
         name: terraform remote config
         code: |
-          cd terraform
+          cd $HOME/terraform
           terraform remote config -backend=S3 -backend-config="bucket=terraform-state-ms" -backend-config="key=tf" -backend-config="encrypt=true"
           terraform plan
     - script:
