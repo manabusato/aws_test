@@ -14,7 +14,7 @@ build:
           mkdir -p $HOME/terraform
           export PATH=$PATH:$HOME/terraform
           # download terraform
-          VERSION=0.6.8
+          VERSION=0.8.1
           cd $HOME/terraform
           wget https://releases.hashicorp.com/terraform/${VERSION}/terraform_${VERSION}_linux_amd64.zip
           unzip terraform_${VERSION}_linux_amd64.zip
