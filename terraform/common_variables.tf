@@ -8,6 +8,6 @@ provider "aws" {
   secret_key = "${var.aws_secret_key}"
   region = "${var.region}"
 }
-TF_VAR_aws_access_key=ÅgAKIAIWH4VH73MUKX3PGA"
-TF_VAR_aws_secret_key=ÅgWOBWKe17DKg7RZkWwjjc+/VXxs1Jb7lh7UmkrdN+"
-TF_VAR_lc_key_name=ÅgAWS_key"
+TF_VAR_aws_access_key="AKIAIWH4VH73MUKX3PGA"
+TF_VAR_aws_secret_key="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"
+TF_VAR_lc_key_name="AWS_key"
