@@ -58,4 +58,6 @@ deploy:
     - script:
         name: terraform apply
         code: |
+          cd terraform
           terraform apply
+
