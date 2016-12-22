@@ -61,5 +61,5 @@ deploy:
         name: terraform apply
         code: |
           cd terraform
-          terraform apply
-          # terraform apply -var 'region='${AWS_DEFAULT_REGION} -var 'aws_access_key='${tf_aws_access_key} -var 'aws_secret_key='${tf_aws_secret_key} -var 'lc_key_name='${tf_lc_key_name}
+          # terraform apply
+          terraform apply -var 'region='${AWS_DEFAULT_REGION} -var 'aws_access_key='${tf_aws_access_key} -var 'aws_secret_key='${tf_aws_secret_key} -var 'lc_key_name='${tf_lc_key_name}
