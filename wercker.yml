@@ -27,7 +27,7 @@ build:
           export TF_VAR_lc_key_name=${tf_lc_key_name}
           cd terraform
           terraform remote config -backend=S3 -backend-config="bucket=test-terraform-state" -backend-config="key=terraform.tfstate" -backend-config="encrypt=true" -backend-config="access_key=${tf_aws_access_key}" -backend-config="secret_key=${tf_aws_secret_key}"
-          terraform plan -var 'access_key='${tf_aws_access_key} -var 'secret_key='${tf_aws_secret_key} -var 'lc_key_name='${tf_lc_key_name}
+          terraform plan -var 'aws_access_key='${tf_aws_access_key} -var 'aws_secret_key='${tf_aws_secret_key} -var 'lc_key_name='${tf_lc_key_name}
     - script:
         name: create pull request
         code: |
