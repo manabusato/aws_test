@@ -23,7 +23,7 @@ build:
         name: terraform remote config
         code: |
           cd terraform
-          terraform remote config -backend=S3 -backend-config="bucket=test-terraform-state" -backend-config="key=terraform.tfstate" -backend-config="encrypt=true"
+          terraform remote config -backend=S3 -backend-config="bucket=test-terraform-state" -backend-config="key=terraform.tfstate" -backend-config="encrypt=true" -backend-config="access_key=$aws_access_key" -backend-config="secret_key=$aws_secret_key"
           terraform plan
     - script:
         name: create pull request
