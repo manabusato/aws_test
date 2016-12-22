@@ -21,11 +21,9 @@ build:
           rm terraform_${VERSION}_linux_amd64.zip
     - script:
         name: terraform remote config
-        aws_access_key: $tf_aws_access_key
-        aws_secret_key: $tf_aws_secret_key
         code: |
           cd terraform
-          terraform remote config -backend=S3 -backend-config="bucket=test-terraform-state" -backend-config="key=terraform.tfstate" -backend-config="encrypt=true" -backend-config="access_key=$aws_access_key" -backend-config="secret_key=$aws_secret_key"
+          terraform remote config -backend=S3 -backend-config="bucket=test-terraform-state" -backend-config="key=terraform.tfstate" -backend-config="encrypt=true" -backend-config="access_key=${tf_aws_access_key}" -backend-config="secret_key=${tf_aws_secret_key}"
           terraform plan
     - script:
         name: create pull request
