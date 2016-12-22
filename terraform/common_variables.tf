@@ -4,7 +4,7 @@ variable "region" {}
 variable "default_security_group" {}
 variable "lc_key_name" {}
 provider "aws" {
-  access_key = "${tf_aws_access_key}"
-  secret_key = "${tf_aws_secret_key}"
+  access_key = "${aws_access_key}"
+  secret_key = "${aws_secret_key}"
   region = "${var.region}"
 }
